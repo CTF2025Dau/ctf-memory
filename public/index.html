@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>ITLABCTF — Memory Tunisie</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🇹🇳 ITLABCTF — Memory Tunisie 🇹🇳</h1>
+    <p>Trouve les paires d’images de lieux tunisiens. Après chaque paire trouvée, devine le nom pour obtenir ton flag.</p>
+    <div id="board" class="board"></div>
+
+    <div id="icons"></div>
+    <div id="messages" class="messages"></div>
+
+    <button id="resetBtn" class="btn">Réinitialiser (debug)</button>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Nom du lieu</h3>
+      <p>Entre le nom exact (ex: "Dougga") :</p>
+      <input id="answerInput" />
+      <div class="modal-actions">
+        <button id="submitAnswer" class="btn">Valider</button>
+        <button id="cancelAnswer" class="btn alt">Annuler</button>
+      </div>
+      <div id="modalResult" class="modal-result"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
