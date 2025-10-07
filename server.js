@@ -40,7 +40,6 @@ const PLACES = [
   { slug: 'bizerte', name: 'Bizerte' },
   { slug: 'monastir', name: 'Monastir' },
   { slug: 'gafsa', name: 'Gafsa' },
-
 ];
 
 // --- Fonctions utilitaires ---
@@ -80,8 +79,9 @@ app.use((req, res, next) => {
 // --- Routes API ---
 app.get('/api/board', (req, res) => {
   const board = req.session.board.map((_, idx) => ({ id: idx }));
-  res.json({ size: 6, board });
+  res.json({ rows: 4, cols: 4, board });
 });
+
 
 app.get('/api/flip/:id', (req, res) => {
   const id = parseInt(req.params.id, 10);
