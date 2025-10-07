@@ -32,24 +32,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // --- Lieux en Tunisie ---
 const PLACES = [
-  { slug: 'carthage', name: 'Carthage' },
   { slug: 'sidi_bou_said', name: 'Sidi Bou Said' },
   { slug: 'dougga', name: 'Dougga' },
   { slug: 'kairouan', name: 'Kairouan' },
-  { slug: 'tozeur', name: 'Tozeur' },
-  { slug: 'djerba', name: 'Djerba' },
   { slug: 'tunis_medina', name: 'Medina' },
   { slug: 'el_jem', name: 'Djem' },
-  { slug: 'chebika', name: 'Chebika' },
-  { slug: 'matmata', name: 'Matmata' },
-  { slug: 'cap_bon', name: 'Cap Bon' },
   { slug: 'bizerte', name: 'Bizerte' },
-  { slug: 'sousse', name: 'Sousse' },
   { slug: 'monastir', name: 'Monastir' },
-  { slug: 'kebili', name: 'Kebili' },
   { slug: 'gafsa', name: 'Gafsa' },
-  { slug: 'tabarka', name: 'Tabarka' },
-  { slug: 'chebba', name: 'Chebba' }
+
 ];
 
 // --- Fonctions utilitaires ---
