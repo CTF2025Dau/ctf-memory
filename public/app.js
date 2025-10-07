@@ -17,16 +17,15 @@ async function loadBoard() {
   const j = await res.json();
   boardData = j.board;
 
-  // 🔥 applique automatiquement les bonnes dimensions de grille
+  // 🟢 applique automatiquement la grille 4x4
   boardEl.style.display = 'grid';
   boardEl.style.gridTemplateColumns = `repeat(${j.cols}, 1fr)`;
-  boardEl.style.gap = '12px';
+  boardEl.style.gap = '14px';
   boardEl.style.maxWidth = `${j.cols * 160}px`;
-  boardEl.style.margin = '20px auto';
+  boardEl.style.margin = '30px auto';
 
   renderBoard();
 }
-
 
 function renderBoard() {
   boardEl.innerHTML = '';
@@ -75,7 +74,7 @@ async function onFlip(e) {
         b.card.classList.remove('flipped');
         flipped = [];
         lock = false;
-      }, 1000);
+      }, 900);
     }
   }
 }
