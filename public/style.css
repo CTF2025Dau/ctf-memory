@@ -14,17 +14,19 @@ body {
 
 .board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin: 20px 0;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes fixes */
+  gap: 12px; /* plus d'espace entre les cartes */
+  margin: 20px auto;
+  max-width: 700px; /* centre le plateau et évite qu’il s’étale trop */
 }
 
 .card {
   width: 100%;
-  padding-top: 100%;
+  padding-top: 100%; /* cartes carrées et plus grandes */
   position: relative;
   perspective: 1000px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .card-inner {
@@ -39,14 +41,8 @@ body {
 }
 
 .card-face {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
 .card-front {
@@ -64,6 +60,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .icon {
