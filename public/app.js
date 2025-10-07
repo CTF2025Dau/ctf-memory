@@ -16,8 +16,17 @@ async function loadBoard() {
   const res = await fetch('/api/board');
   const j = await res.json();
   boardData = j.board;
+
+  // 🔥 applique automatiquement les bonnes dimensions de grille
+  boardEl.style.display = 'grid';
+  boardEl.style.gridTemplateColumns = `repeat(${j.cols}, 1fr)`;
+  boardEl.style.gap = '12px';
+  boardEl.style.maxWidth = `${j.cols * 160}px`;
+  boardEl.style.margin = '20px auto';
+
   renderBoard();
 }
+
 
 function renderBoard() {
   boardEl.innerHTML = '';
