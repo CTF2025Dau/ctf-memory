@@ -34,11 +34,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 const PLACES = [
   { slug: 'sidi_bou_said', name: 'Sidi Bou Said' },
   { slug: 'dougga', name: 'Dougga' },
-  { slug: 'kairouan', name: 'Kairouan' },
+  { slug: 'chebika', name: 'Chebika' },
   { slug: 'tunis_medina', name: 'Medina' },
   { slug: 'el_jem', name: 'Djem' },
   { slug: 'bizerte', name: 'Bizerte' },
-  { slug: 'monastir', name: 'Monastir' },
+  { slug: 'matmata', name: 'Matmata' },
   { slug: 'gafsa', name: 'Gafsa' },
 ];
 
